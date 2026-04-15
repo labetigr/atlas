@@ -1,1 +1,118 @@
 
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ΑΤΛΑΣ | ΠΡΩΤΟΚΟΛΛΟ ΗΩ</title>
+    <style>
+        /* RESET & BASE */
+        * { box-sizing: border-box; }
+        body, html { 
+            margin: 0; padding: 0; 
+            height: 100vh; height: 100dvh; 
+            width: 100vw; background-color: #000; 
+            color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            overflow: hidden; 
+        }
+
+        /* BACKGROUND ENGINE */
+        .atlas-bg { 
+            background: #000 url('atlas_final_4k.png') no-repeat center bottom; 
+            background-size: cover; 
+            height: 100%; width: 100%;
+            position: relative;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        /* HEADER: ΑΤΛΑΣ & ΠΥΛΩΝΕΣ (Ανύψωση) */
+        .header-top {
+            position: absolute;
+            top: 1vh; 
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+        h1 { 
+            font-size: calc(1.6rem + 1vw); 
+            letter-spacing: 15px; 
+            text-transform: uppercase; 
+            font-weight: 200;
+            text-shadow: 0px 4px 20px rgba(0,0,0,1);
+            margin: 0;
+            padding-left: 15px;
+        }
+        .pillars-nav {
+            display: flex;
+            justify-content: center;
+            gap: 4vw;
+            margin-top: 0.5vh;
+        }
+        .pillar {
+            font-size: calc(0.6rem + 0.3vw);
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0,0,0,1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* FOOTER: ΕΠΙΚΟΙΝΩΝΙΑ (Σκάλισμα στην Εσοχή) */
+        .footer-base {
+            position: absolute;
+            bottom: 1vh; /* Δύο γραμμές κάτω */
+            left: 52%;   /* Ελαφρώς δεξιά */
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            z-index: 20;
+        }
+        .marble-btn { 
+            display: inline-block; 
+            padding: 10px 65px; 
+            /* Διάφανο για να φαίνεται η εσοχή του μαρμάρου */
+            background: transparent; 
+            border: 1px solid rgba(255,255,255,0.05); 
+            color: rgba(255,255,255,0.6); 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            letter-spacing: 5px; 
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        .marble-btn:hover { 
+            color: #fff;
+            letter-spacing: 7px;
+            text-shadow: 0 0 15px rgba(255,255,255,0.5);
+            cursor: pointer;
+        }
+
+        /* MOBILE OPTIMIZATION */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.5rem; letter-spacing: 10px; }
+            .pillars-nav { flex-direction: column; gap: 4px; }
+            .footer-base { bottom: 2vh; left: 50%; }
+            .marble-btn { padding: 10px 30px; width: 85%; max-width: 280px; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="atlas-bg">
+        
+        <div class="header-top">
+            <h1>ΑΤΛΑΣ</h1>
+            <div class="pillars-nav">
+                <div class="pillar">Αυτονομη Νοημοσυνη</div>
+                <div class="pillar">Καθολικος Συγχρονισμος</div>
+                <div class="pillar">Γνωστικος Εξωσκελετος</div>
+            </div>
+        </div>
+
+        <div class="footer-base">
+            <a href="mailto:ΤΟ-EMAIL-ΣΟΥ@gmail.com" class="marble-btn">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+        </div>
+
+    </div>
+</body>
+</html>
