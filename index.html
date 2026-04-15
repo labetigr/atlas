@@ -1,1 +1,107 @@
 
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ΑΤΛΑΣ | ΠΡΩΤΟΚΟΛΛΟ ΗΩ</title>
+    <style>
+        * { box-sizing: border-box; }
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
+        
+        .atlas-bg { 
+            background: url('atlas_final_4k.png') no-repeat center center fixed; 
+            background-size: cover; 
+            height: 100vh; 
+            width: 100vw;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Top Section: Τίτλος και 3 Πυλώνες */
+        .top-header {
+            margin-top: 5vh;
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 { 
+            font-size: calc(2.5rem + 1vw); 
+            letter-spacing: 20px; 
+            text-transform: uppercase; 
+            font-weight: 200;
+            text-shadow: 0px 4px 20px rgba(0,0,0,1);
+            margin: 0 0 2vh 0;
+            padding-left: 20px;
+        }
+
+        .pillars-line {
+            display: flex;
+            justify-content: center;
+            gap: 4vw;
+            flex-wrap: nowrap;
+        }
+
+        .pillar-node {
+            font-size: calc(0.7rem + 0.3vw);
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,1);
+            color: #fff;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 5px;
+        }
+
+        /* Bottom Section: Μόνο το κουμπί επικοινωνίας */
+        .bottom-action {
+            position: absolute;
+            bottom: 7vh; /* Τοποθέτηση πάνω στο μάρμαρο της βάσης */
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn { 
+            display: inline-block; 
+            padding: 15px 40px; 
+            border: 1px solid #fff; 
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 0.8rem; 
+            letter-spacing: 4px; 
+            transition: 0.5s; 
+            text-transform: uppercase;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            font-weight: bold;
+        }
+        .btn:hover { background: #fff; color: #000; box-shadow: 0 0 30px rgba(255,255,255,0.4); }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; letter-spacing: 12px; }
+            .pillars-line { gap: 15px; flex-direction: column; align-items: center; }
+            .pillar-node { font-size: 0.75rem; border: none; }
+            .bottom-action { bottom: 5vh; }
+        }
+    </style>
+</head>
+<body>
+    <div class="atlas-bg">
+        <div class="top-header">
+            <h1>ΑΤΛΑΣ</h1>
+            <div class="pillars-line">
+                <div class="pillar-node">Αυτονομη Νοημοσυνη</div>
+                <div class="pillar-node">Καθολικος Συγχρονισμος</div>
+                <div class="pillar-node">Γνωστικος Εξωσκελετος</div>
+            </div>
+        </div>
+
+        <div class="bottom-action">
+            <a href="mailto:ΤΟ-GMAIL-ΣΟΥ@gmail.com?subject=Πρωτόκολλο ΗΩ: Επικοινωνία" class="btn">Αιτημα Επικοινωνιας</a>
+        </div>
+    </div>
+</body>
+</html>
