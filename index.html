@@ -1,1 +1,126 @@
 
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ΑΤΛΑΣ | ΠΡΩΤΟΚΟΛΛΟ ΗΩ</title>
+    <style>
+        * { box-sizing: border-box; }
+        
+        body, html { 
+            margin: 0; padding: 0; 
+            height: 100vh; height: 100dvh; 
+            width: 100vw; background-color: #000; 
+            color: #fff; font-family: 'Segoe UI', sans-serif; 
+            overflow: hidden; 
+        }
+        
+        .atlas-bg { 
+            /* Φορτώνουμε την εικόνα και την κλειδώνουμε στη βάση */
+            background: #000 url('atlas_final_4k.png') no-repeat center bottom; 
+            background-size: cover; 
+            height: 100%; width: 100%;
+            position: relative;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        /* ΚΟΡΥΦΗ: Τίτλος & 3 Πυλώνες */
+        .top-section {
+            position: absolute;
+            top: 2vh; 
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 { 
+            font-size: calc(1.7rem + 1.2vw); 
+            letter-spacing: 20px; 
+            text-transform: uppercase; 
+            font-weight: 200;
+            text-shadow: 0px 4px 20px rgba(0,0,0,1);
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .pillars-nav {
+            display: flex;
+            justify-content: center;
+            gap: 4vw;
+            margin-top: 1vh;
+        }
+
+        .pillar {
+            font-size: calc(0.65rem + 0.3vw);
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* ΒΑΣΗ: Το κουμπί ΕΠΙΚΟΙΝΩΝΙΑ αντικαθιστά το κείμενο του μαρμάρου */
+        .bottom-section {
+            position: absolute;
+            bottom: 3vh; /* Τοποθέτηση ακριβώς πάνω στο σκαλιστό μέρος της βάσης */
+            width: 100%;
+            text-align: center;
+            z-index: 20;
+        }
+
+        .marble-engraving { 
+            display: inline-block; 
+            padding: 14px 60px; 
+            border: 1px solid rgba(255,255,255,0.1); 
+            color: rgba(255,255,255,0.5); 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            letter-spacing: 6px; 
+            transition: 0.6s ease-in-out; 
+            text-transform: uppercase;
+            /* Το background είναι αρκετά αδιαφανές για να σβήσει το παλιό κείμενο */
+            background: rgba(10, 10, 10, 0.7); 
+            backdrop-filter: blur(4px);
+            /* Εσωτερική σκιά για αίσθηση σκαλίσματος */
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.9);
+            font-weight: 300;
+        }
+
+        .marble-engraving:hover { 
+            color: #fff;
+            background: rgba(20, 20, 20, 0.8);
+            box-shadow: inset 0 0 25px rgba(255,255,255,0.05);
+            letter-spacing: 8px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.6rem; letter-spacing: 12px; }
+            .pillars-nav { flex-direction: column; gap: 6px; }
+            .pillar { font-size: 0.75rem; }
+            .bottom-section { bottom: 4vh; }
+            .marble-engraving { padding: 12px 40px; width: 85%; max-width: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="atlas-bg">
+        
+        <div class="top-section">
+            <h1>ΑΤΛΑΣ</h1>
+            <div class="pillars-nav">
+                <div class="pillar">Αυτονομη Νοημοσυνη</div>
+                <div class="pillar">Καθολικος Συγχρονισμος</div>
+                <div class="pillar">Γνωστικος Εξωσκελετος</div>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <a href="mailto:ΤΟ-EMAIL-ΣΟΥ@gmail.com" class="marble-engraving">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+        </div>
+
+    </div>
+</body>
+</html>
